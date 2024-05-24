@@ -1,0 +1,52 @@
+edi:
+  senderId: 0123456789
+  receiverId : 0123456789
+
+  isaInterchangeControlVersionNumber: "00401"
+  isaInterchangeControlNumber : "000010154"
+  isaAcknowledgmentRequested : 0
+  isaUsageIndicator : P
+  isaAuthorizationInformation :
+  isaSecurityInformation :
+  isaAuthorizationInformationQualifier : "00"
+  isaSecurityInformationQualifier : "00"
+  isaInterchangeIDQualifier : "01"
+
+
+  gsGroupControlNumber : 10154
+  gsResponsibleAgencyCode : x
+  gsVersionIdentifierCode : "004010"
+
+  stTransactionSetControlNumber : 21847
+
+  biaReferenceIdentification : 1234567
+  biaTransactionSetPurposeCode : "00"
+
+  refReferenceIdentification : 176
+  refReferenceIdentificationQualifier : IA
+
+  n1EntityIdentifierCode : VP
+
+  linProductServiceIDQualifier : UP
+  linProductServiceIDQualifierSecond : VP
+
+  ctpPriceIdentifierCode : DIS
+
+  qtyQuantityQualifier : 17
+  qtyMeasurementCode : EA
+
+  dtmDateTimeQualifier : "018"
+
+spring:
+  datasource:
+    name: edi_management_parser
+    username: postgres
+    password: root
+    url: jdbc:postgresql://localhost:5432/edi_management_parser
+    driver-class-name: org.postgresql.Driver
+  liquibase:
+    change-log : db/changelog/master-changelog.xml
+  jooq:
+    sql-dialect: org.hibernate.dialect.PostgreSQLDialect
+
+
